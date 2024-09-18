@@ -39,8 +39,8 @@ jobs:
             echo -e "[同步FRP] ${{ env.frp_version }}" > $GITHUB_WORKSPACE/CHANGELOG.md
             echo -e "${{ env.frp_version }}" > ${{ env.VERSION_FILE }}
 
-            git config user.name "github-actions"
-            git config user.email "42014615+jing332@users.noreply.github.com"
+            git config user.name "boz700908"
+            git config user.email "3468806165@qq.com"
             git add .
             git commit -m "[bot] Update frp to ${{ env.frp_version }}"
             git push
@@ -49,6 +49,6 @@ jobs:
       - name: Run workflow release
         if: env.has_update == 1 && ( success() || failure() )
         run: |
-          gh workflow run release.yaml -R jing332/frpandroid
+          gh workflow run release.yaml -R boz700908/frpandroid
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
