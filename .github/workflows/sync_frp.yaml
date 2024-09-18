@@ -49,6 +49,6 @@ jobs:
       - name: Run workflow release
         if: env.has_update == 1 && ( success() || failure() )
         run: |
-          gh workflow run release.yaml -R boz700908/frpandroid
+          gh workflow run release.yaml -R boz700908/FrpAndroid
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
